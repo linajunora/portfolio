@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  transition: color 0.3s ease;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.background-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../assets/images/bg-muted.PNG");
+  background-size: cover;
+  background-position: center;
+}
+
+.intense-mask-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../assets/images/bg-intense.PNG");
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 50px, rgba(0, 0, 0, 0.8) 100px, rgba(0, 0, 0, 0.6) 160px, rgba(0, 0, 0, 0.4) 220px, rgba(0, 0, 0, 0.2) 260px, rgba(0, 0, 0, 0.1) 285px, rgba(0, 0, 0, 0) 350px);
+          mask-image: radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 50px, rgba(0, 0, 0, 0.8) 100px, rgba(0, 0, 0, 0.6) 160px, rgba(0, 0, 0, 0.4) 220px, rgba(0, 0, 0, 0.2) 260px, rgba(0, 0, 0, 0.1) 285px, rgba(0, 0, 0, 0) 350px);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 700px 700px;
+          mask-size: 700px 700px;
+  pointer-events: none;
+  transition: -webkit-mask-position 0.1s ease;
+  transition: mask-position 0.1s ease;
+  transition: mask-position 0.1s ease, -webkit-mask-position 0.1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.indexBody {
+  width: 100vw;
+  height: 100vh;
+}
+.indexBody .mainIndex {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.indexBody .mainIndex .mainContainer {
+  background-color: #FAE3D3;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.indexBody .mainIndex .mainContainer .headerDiv {
+  display: flex;
+}
+.indexBody .mainIndex .mainContainer .headerDiv #logoImg {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation: fadeInPop 1.7s ease-out forwards;
+}
+.indexBody .mainIndex .mainContainer .headerDiv .h1Div .linaH1 {
+  font-size: 5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 30px;
+  color: #1500ED;
+  opacity: 0;
+  animation: fadeInLeft 1.7s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.indexBody .mainIndex .mainContainer .headerDiv .h1Div .junoraH1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: 30px;
+  color: #1500ED;
+  opacity: 0;
+  animation: fadeInRight 1.7s ease-out forwards;
+  animation-delay: 0.6s;
+}
+.indexBody .mainIndex .mainContainer .sloganDiv h2 {
+  padding-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 30px;
+  color: #1500ED;
+  border-bottom: 1px solid #1500ED;
+  animation: fadeInPop 1.7s ease-out forwards;
+}
+.indexBody .mainIndex .mainContainer .sloganDiv h2 .frontendH2 {
+  font-weight: 600;
+}
+.indexBody .mainIndex .viewWorkBtnDiv {
+  margin-top: 40px;
+}
+.indexBody .mainIndex .viewWorkBtnDiv #viewWorkBtn {
+  padding: 12px 24px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1500ED;
+  background-color: #FAE3D3;
+  border: 1px solid #1500ED;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.indexBody .mainIndex .viewWorkBtnDiv #viewWorkBtn .arrowIcon {
+  transition: transform 0.3s ease;
+}
+.indexBody .mainIndex .viewWorkBtnDiv #viewWorkBtn:hover {
+  background-color: #1500ED;
+  color: #FAE3D3;
+  transform: scale(1.05);
+}
+.indexBody .mainIndex .viewWorkBtnDiv #viewWorkBtn:hover .arrowIcon {
+  transform: translateY(2px);
+}
+.indexBody .mainIndex .viewWorkBtnDiv #viewWorkBtn:active {
+  transform: scale(0.98);
+}
+
+.linaH1 span,
+.junoraH1 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.linaH1 span:hover,
+.junoraH1 span:hover {
+  transform: scale(1.2);
+}
+
+.sloganH2 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.sloganH2 span:hover {
+  transform: scale(1.1);
+}
+
+body {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aboutBody {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FAE3D3;
+  padding: 60px;
+}
+.aboutBody .outerWrapper .mainAbout {
+  background-color: #fbeadd;
+  padding: 60px;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  letter-spacing: 6px;
+  color: #1500ED;
+  text-transform: uppercase;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 #linaAbout {
+  letter-spacing: 30px;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 #junoraAbout {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 #kuzAbout {
+  font-size: 1rem;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 p {
+  font-family: "Raleway", sans-serif;
+  color: #232530;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box2 .avatarImg {
+  width: 200px;
+}/*# sourceMappingURL=style.css.map */
