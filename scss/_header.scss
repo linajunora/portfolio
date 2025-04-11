@@ -1,0 +1,37 @@
+.header {
+    max-width: 800px;
+    padding: 0px 0px 60px 0px;
+    display: flex;
+    justify-content: center;
+        align-items: center;
+    .navBar {
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navUl {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            gap: 40px;
+
+            li {
+                            font-family: "Raleway", sans-serif;
+                            font-weight: 400;
+                            letter-spacing: 6px;
+                            color: $mainBlue500;
+                            text-transform: uppercase;
+            }
+            
+        }
+    }
+}
+
+.navUl a, .navUl li {
+    display: inline-block;
+  }
+
+  .contactLi a {
+    text-align: right;
+}

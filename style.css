@@ -67,8 +67,8 @@ a {
           mask-image: radial-gradient(circle at 50% 50%, rgb(0, 0, 0) 50px, rgba(0, 0, 0, 0.8) 100px, rgba(0, 0, 0, 0.6) 160px, rgba(0, 0, 0, 0.4) 220px, rgba(0, 0, 0, 0.2) 260px, rgba(0, 0, 0, 0.1) 285px, rgba(0, 0, 0, 0) 350px);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-size: 700px 700px;
-          mask-size: 700px 700px;
+  -webkit-mask-size: 860px 860px;
+          mask-size: 860px 860px;
   pointer-events: none;
   transition: -webkit-mask-position 0.1s ease;
   transition: mask-position 0.1s ease;
@@ -217,15 +217,34 @@ body.loaded {
   background-color: #FAE3D3;
   padding: 60px;
 }
+.aboutBody .outerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .aboutBody .outerWrapper .mainAbout {
+  max-width: 800px;
   background-color: #fbeadd;
   padding: 60px;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper {
+  display: flex;
+  row-gap: 30px;
+  justify-content: space-between;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-size: 2rem;
+  justify-content: flex-start;
+  font-size: 4rem;
   font-family: "Raleway", sans-serif;
   font-weight: 200;
   letter-spacing: 6px;
@@ -237,15 +256,63 @@ body.loaded {
 }
 .aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 #junoraAbout {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 3rem;
+  letter-spacing: 8px;
 }
 .aboutBody .outerWrapper .mainAbout .contentWrapper .box1 .headerContent h1 #kuzAbout {
+  display: inline-block;
   font-size: 1rem;
+  letter-spacing: 11px;
+  margin-top: 10px;
 }
 .aboutBody .outerWrapper .mainAbout .contentWrapper .box1 p {
-  font-family: "Raleway", sans-serif;
-  color: #232530;
+  margin-top: 40px;
+  font-family: "Courier New", Courier, monospace;
+  color: #1c1380;
+  border-top: 1px solid #1500ED;
+  padding-top: 20px;
+}
+.aboutBody .outerWrapper .mainAbout .contentWrapper .box2 {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 .aboutBody .outerWrapper .mainAbout .contentWrapper .box2 .avatarImg {
   width: 200px;
+}
+
+.header {
+  max-width: 800px;
+  padding: 0px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navBar {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navBar .navUl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header .navBar .navUl li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: #1500ED;
+  text-transform: uppercase;
+}
+
+.navUl a, .navUl li {
+  display: inline-block;
+}
+
+.contactLi a {
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

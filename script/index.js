@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //background stuff
 const maskLayer = document.querySelector('.intense-mask-layer');
-const maskRadius = 350; 
+const maskRadius = 430; 
 
 document.addEventListener('mousemove', (e) => {
   const x = e.clientX - maskRadius;
