@@ -1,0 +1,20 @@
+.projectsPage {
+    margin-top: 60px;
+    width: 100vw;
+    background-color: $beige500;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .contentWrapper {
+        .box1 {
+            .projectDiv {
+                .projectImgDiv {
+                    .projectImg {
+                        width: 600px;
+                    }
+                }
+            }
+        }
+    }
+}

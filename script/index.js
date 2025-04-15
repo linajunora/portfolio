@@ -14,16 +14,3 @@ document.addEventListener('mousemove', (e) => {
 });
 //
 
-//view work btn 
-const viewWorkBtn = document.getElementById('viewWorkBtn');
-
-viewWorkBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  const body = document.querySelector('.indexBody');
-  body.classList.add('fade-out');
-
-  setTimeout(() => {
-    window.location.href = '/about.html';
-  }, 600);
-});
